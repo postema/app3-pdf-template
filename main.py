@@ -14,8 +14,8 @@ for index, row in df.iterrows():
     pdf.cell(w=0, h=12, txt=row["Topic"], align="L", ln=1)
 
     # set body lines
-    for i in range(27):
-        pdf.line(10, 21 + i * 10, 200, 21 + i * 10)
+    for i in range(20, 288, 10):
+        pdf.line(10, i, 200, i)
 
     # set footer
     pdf.ln(265)
@@ -27,8 +27,8 @@ for index, row in df.iterrows():
         pdf.add_page()
 
         # set body lines
-        for i in range(27):
-            pdf.line(10, 21 + i * 10, 200, 21 + i * 10)
+        for i in range(20, 288, 10):
+            pdf.line(10, i, 200, i)
 
         # set footer
         pdf.ln(277)
